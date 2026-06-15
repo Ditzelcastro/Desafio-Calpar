@@ -1,0 +1,93 @@
+:root {
+  --bg: #f4f6fb;
+  --superficie: #ffffff;
+  --texto: #0f172a;
+  --texto-suave: #64748b;
+  --borda: #e2e8f0;
+  --azul: #2563eb;
+  --azul-escuro: #1d4ed8;
+  --verde-bg: #dcfce7;
+  --verde-tx: #15803d;
+  --vermelho-bg: #fee2e2;
+  --vermelho-tx: #b91c1c;
+  --sombra: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+.topo {
+  background: linear-gradient(135deg, var(--azul), var(--azul-escuro));
+  color: #fff;
+  padding: 24px 16px;
+  text-align: center;
+}
+.topo h1 { margin: 0; font-size: 1.5rem; }
+.topo .sub { margin: 6px 0 0; opacity: 0.9; font-size: 0.88rem; }
+
+.container { max-width: 860px; margin: 24px auto; padding: 0 16px; }
+
+.acoes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background: var(--azul);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn:hover { background: var(--azul-escuro); }
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.card-user {
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 18px 16px;
+  box-shadow: var(--sombra);
+}
+.card-user .nome { font-weight: 600; font-size: 1.05rem; margin-bottom: 10px; }
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.badge.sim { background: var(--verde-bg); color: var(--verde-tx); }
+.badge.nao { background: var(--vermelho-bg); color: var(--vermelho-tx); }
+
+.erro {
+  background: var(--vermelho-bg);
+  color: var(--vermelho-tx);
+  border: 1px solid var(--vermelho-tx);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.dica { color: var(--texto-suave); font-size: 0.88rem; }
+.hidden { display: none; }
